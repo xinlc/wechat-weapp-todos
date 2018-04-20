@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">
+    <image class="plus" src="/images/plus.png"></image>
+    <input class="add-todo" value="{{ input }}" placeholder="hello Leo..." bindchange="addTodoHandle" bindinput="inputChageHandel" auto-focus="true" />
+  </view>
+  <block wx:if="{{ todos.length > 0 }}">
+    <view class="todos">
+      <view class="item {{ item.completed ? 'completed' : '' }}" wx:for="{{ todos }}" wx:key="{{ index }}" data-index="{{ index }}" bindtap="toggleTodoHandle">
+        <icon class="checkbox" type="{{ item.completed ? 'success' : 'circle'}}" />
+        <text class="name">{{ item.name }}</text>
+        <icon class="remove" type="clear" size="16" catchtap="removeTodoHandle" data-index="{{ index }}" />
+      </view>
+    </view>
+    <view class="footer">
+      <text class="btn" bindtap="toggleAllHandle">Toggle all</text>
+      <text wx:if="{{ leftCount }}">{{ leftCount }} item{{ leftCount === 1 ? '' : 's' }} left</text>
+      <text class="btn" bindtap="clearCompletedHandle">Clear completed</text>
+    </view>
+  </block>
+  <block wx:else>
+      <view>还不睡觉睡觉。。。</view>
+      <text class="title">Congratulations!\n</text>
+      <text class="content">There is no remaining TODOS</text>
+  </block>
+
+</view>

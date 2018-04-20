@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#333",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "Leo 小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#f5f5f5",
+    "selectedColor": "#222",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "todos",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-actived.png"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "logs",
+      "iconPath": "images/note.png",
+      "selectedIconPath": "images/note-actived.png"
+    }]
+  }
+}

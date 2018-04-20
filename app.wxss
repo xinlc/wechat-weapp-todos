@@ -1,0 +1,5 @@
+/**app.wxss**/
+page {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
