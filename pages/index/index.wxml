@@ -18,7 +18,6 @@
     </view>
   </block>
   <block wx:else>
-      <view>还不睡觉睡觉。。。</view>
       <text class="title">Congratulations!\n</text>
       <text class="content">There is no remaining TODOS</text>
   </block>
